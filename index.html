@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p11_js_selectors</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script >
+        $(document).ready(function(){
+            
+            /*COLORES*/
+            $("#rojo").click(function(){
+                $("#rojo").hide();
+            });
+
+            $("#azul").click(function(){
+                $("#azul").hide();
+            });
+
+            $("#verde").click(function(){
+                $("#verde").hide();
+            });
+
+            $("#amarillo").click(function(){
+                $("#amarillo").hide();
+            });
+            /*APARECER LLAVE*/
+            $("#llave").hide();
+            $("#amarillo").click(function(){
+                $("#llave").show();
+                });
+
+            /*ABRIR COFRE*/
+                $("#abierto").hide();
+                $("#llave").click(function(){
+                    $("#abierto").show();
+                });
+
+            /*DESAPARECER COFRE CERRADO*/
+                $("#llave").click(function(){
+                $("#cofre").hide();
+                });
+            
+            /*CERRAR COFRE*/
+            $("#abierto").click(function(){
+                $("#abierto").hide();
+            });
+
+            $("#abierto").click(function(){
+                $("#cofre").show();
+            });
+
+
+          
+        });
+
+    </script>
+    <style>
+     
+       
+    
+        
+        img{
+            height: 200px;
+            width: 200px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cofre{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #abierto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header{
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuentra la llave entre los bolsos para abrir el cofre.</h1>
+    </header>
+    <div class="container">
+        <div id="rojo">
+            <img src="img/rojo.png" alt="">
+        </div>
+
+        <div id="azul">
+            <img src="img/azul.png" alt="">
+        </div>
+
+        <div id="verde">
+            <img src="img/verde.png" alt="">
+        </div>
+
+        <div id="amarillo">
+            <img src="img/amarillo.png" alt="">
+        </div>
+
+        <div id="llave">
+            <img src="img/llave.png" alt="">
+        </div>
+
+    </div>
+
+    
+    
+
+    <div id="cofre">
+        <img src="img/cofre cerrado.jpg" alt="">
+    </div>
+
+    <div id="abierto">
+        <img src="img/abierto.jpg" alt="">
+
+    </div>
+</body>
+</html>
